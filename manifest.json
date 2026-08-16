@@ -1,1 +1,3 @@
-{"name":"GLADION - SKY OF DESTINY","short_name":"GLADION","start_url":"./index.html","display":"fullscreen","orientation":"landscape","background_color":"#05080d","theme_color":"#05080d"}
+{
+  "name":"GLADION — DARK OCEAN FRONT","short_name":"GLADION","description":"アニメSF横スクロールシューティング","id":"./","start_url":"./index.html","scope":"./","display":"fullscreen","orientation":"landscape","background_color":"#03050a","theme_color":"#05080f","categories":["games"],"icons":[{"src":"concept.png","sizes":"1536x1024","type":"image/png","purpose":"any"}]
+}
