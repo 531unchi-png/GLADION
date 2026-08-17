@@ -1,7 +1,7 @@
 'use strict';
-/* GLADION v2.2 — cinematic boss encounter */
+/* GLADION v2.3 — cinematic boss encounter + high-detail art loader */
 (()=>{
-const originalSpawnBoss=window.spawnBoss;
+const art=document.createElement('script');art.src='./graphics-v3.js';document.head.appendChild(art);
 window.spawnBoss=function(){
  audio.warning();toast('WARNING');G.bossTriggered=true;G.flash=.25;G.shake=8;
  setTimeout(()=>toast('ABYSSAL DREADNOUGHT'),650);
