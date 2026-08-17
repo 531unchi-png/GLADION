@@ -1,5 +1,5 @@
 'use strict';
-const CACHE='gladion-shell-v3.0.0';
+const CACHE='gladion-shell-v3.1.0';
 const SHELL=['./','./index.html','./style.css','./controls-v2.css','./game.js','./graphics-v2.js','./graphics-v3.js','./controls-v2.js','./boss-v2.js','./manifest.json','./concept.png'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL)).then(()=>self.skipWaiting()));});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('gladion-')&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim()));});
