@@ -1,5 +1,5 @@
 'use strict';
-const CACHE='gladion-shell-v5.3.0';
+const CACHE='gladion-shell-v5.4.0';
 const SHELL=['./','./index.html','./style.css','./controls-v2.css','./game.js','./graphics-v2.js','./graphics-v4.js','./controls-v2.js','./boss-v2.js','./manifest.json','./concept.png','./dark-ocean.png','./93E1037C-4420-49C7-8635-62CA31D62A7F.PNG','./EA3BF3FC-FEA3-41C9-B7ED-948F878B3EC7.PNG','./44C4AF99-9753-431D-9619-5B9DDAAECB42.PNG','./F773CB7A-6014-4B0B-A994-973D33536DDF.PNG','./94E02639-59FF-4E0F-8702-F88A38646A28.PNG','./CD656E5B-808B-474C-A1AA-77BB8D91FB8C.PNG','./FB35C0AC-851D-4A47-A644-6119AD10F1A5.PNG','./44355BD6-2092-4F12-9F21-286C841BCEF3.PNG'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL)).then(()=>self.skipWaiting()));});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('gladion-')&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim()));});
